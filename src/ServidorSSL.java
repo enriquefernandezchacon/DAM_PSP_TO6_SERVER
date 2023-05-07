@@ -9,7 +9,8 @@ import java.io.PrintWriter;
 public class ServidorSSL {
 
     public static void main(String[] args) {
-
+        System.setProperty("javax.net.ssl.keyStore", "keystore.jks");
+        System.setProperty("javax.net.ssl.keyStorePassword", "123456");
         // Crear una instancia de SSLServerSocketFactory
         SSLServerSocketFactory sslServerSocketFactory = (SSLServerSocketFactory) SSLServerSocketFactory.getDefault();
 
